@@ -105,24 +105,46 @@
   # Add the NixOS Manual on virtual console 8
   services.nixosManual.showManual = true;
 
+  services.dnsmasq.enable = false;
+
   environment = {
-    systemPackages = [
-      pkgs.glibcLocales
-      pkgs.dvdplusrwtools
-      pkgs.xorg.xf86inputsynaptics
-      pkgs.eject
-
-      pkgs.git
-      pkgs.gnupg
-      pkgs.tmux
-      pkgs.vim
-
-      pkgs.python
-
-      pkgs.chromium
-      pkgs.google_talk_plugin
-
+    systemPackages = with pkgs; [
+      acpitool
+      alsaLib
+      alsaPlugins
+      alsaUtils
+      colordiff
+      chromium
+      cpufrequtils
+      dvdplusrwtools
+      eject
+      gimp
+      git
+      glibcLocales
+      gnupg
+      google_talk_plugin
+      htop
+      netcat
+      nmap
+      openvpn
+      powertop
+      pulseaudio
+      pwgen
+      python
+      tmux
+      unrar
+      unzip
+      vim
+      vlc
+      xorg.xf86inputsynaptics
+      zip
+    ];
+    x11Packages = with pkgs; [
+      rdesktop
+      wpa_supplicant_gui
     ];
   };
+
+  powerManagement.enable = true;
 }
 
