@@ -118,6 +118,7 @@
       cpufrequtils
       dvdplusrwtools
       eject
+      gcc
       gimp
       git
       glibcLocales
@@ -127,6 +128,7 @@
       netcat
       nmap
       openvpn
+      pgadmin
       powertop
       pulseaudio
       pwgen
@@ -136,6 +138,7 @@
       unzip
       vim
       vlc
+      xchat
       xorg.xf86inputsynaptics
       zip
     ];
