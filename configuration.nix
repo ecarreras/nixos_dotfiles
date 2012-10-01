@@ -89,14 +89,15 @@
      layout = "es";
      xkbOptions = "eurosign:e";
      desktopManager = {
-       default = "kde4";
-       kde4 = {
+       default = "xfce";
+       xfce = {
          enable = true;
        };
      };
      displayManager = {
-       kdm = {
+       slim = {
          enable = true;
+	 hideCursor = true;
        };
      };
    };
@@ -118,21 +119,9 @@
 
       pkgs.python
 
-      pkgs.networkmanager
       pkgs.chromium
       pkgs.google_talk_plugin
 
-      #pkgs.synergy
-    ];
-    kdePackages = with pkgs;[
-      kde4.kdegraphics
-      kde4.kdeutils
-      kde4.kdetoys
-      kde4.kdenetwork
-      kde4.kdemultimedia
-      kde4.kdeartwork
-      kde4.l10n.ca
-      kde4.k3b
     ];
   };
 }
