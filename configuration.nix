@@ -105,7 +105,8 @@
   # Add the NixOS Manual on virtual console 8
   services.nixosManual.showManual = true;
 
-  services.dnsmasq.enable = false;
+  services.dnsmasq.enable = true;
+  services.dnsmasq.servers = ["8.8.8.8" "8.8.4.4"];
 
   environment = {
     systemPackages = with pkgs; [
@@ -113,11 +114,13 @@
       alsaLib
       alsaPlugins
       alsaUtils
+      audacious
       colordiff
       chromium
       cpufrequtils
       dvdplusrwtools
       eject
+      eclipses.eclipse_sdk_42
       gcc
       gimp
       git
@@ -125,6 +128,7 @@
       gnupg
       google_talk_plugin
       htop
+      libxml2
       netcat
       nmap
       openvpn
@@ -134,6 +138,7 @@
       pwgen
       python
       tmux
+      transmission
       unrar
       unzip
       vim
