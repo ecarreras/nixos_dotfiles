@@ -10,6 +10,7 @@
     # Include the configuration for part of your system which have been
     # detected automatically.
     ./hardware-configuration.nix
+    ./nixos/modules/programs/virtualbox.nix
   ];
 
   boot.initrd.kernelModules = [
@@ -28,6 +29,8 @@
     # Define on which hard drive you want to install Grub.
     device = "/dev/sda";
   };
+
+  boot.blacklistedKernelModules = [ "pcspkr" ];
 
   networking = {
     hostName = "nixos"; # Define your hostname.
@@ -97,7 +100,7 @@
      displayManager = {
        slim = {
          enable = true;
-	 hideCursor = true;
+         hideCursor = true;
        };
      };
    };
@@ -144,6 +147,7 @@
       vim
       vlc
       xchat
+#      xfce.xfce4_systemload_plugin
       xorg.xf86inputsynaptics
       zip
     ];
