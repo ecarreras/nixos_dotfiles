@@ -131,6 +131,7 @@
       gnupg
       google_talk_plugin
       htop
+      libreoffice
       libxml2
       netcat
       nmap
