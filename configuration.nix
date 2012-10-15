@@ -84,6 +84,8 @@
   # Add CUPS to print documents.
   services.printing.enable = true;
 
+  users.defaultUserShell = "/var/run/current-system/sw/bin/zsh";
+
   # Add XServer (default if you have used a graphical iso)
    services.xserver = {
      enable = true;
@@ -122,8 +124,9 @@
       chromium
       cpufrequtils
       dvdplusrwtools
-      eject
       eclipses.eclipse_sdk_42
+      eject
+      evince
       gcc
       gimp
       git
@@ -131,7 +134,7 @@
       gnupg
       google_talk_plugin
       htop
-      libreoffice
+      #libreoffice
       libxml2
       netcat
       nmap
@@ -148,9 +151,11 @@
       vim
       vlc
       xchat
-#      xfce.xfce4_systemload_plugin
+      xfce.xfce4_systemload_plugin
+      xfce.xfce4_cpufreq_plugin
       xorg.xf86inputsynaptics
       zip
+      zsh
     ];
     x11Packages = with pkgs; [
       rdesktop
