@@ -113,6 +113,12 @@
   services.dnsmasq.enable = true;
   services.dnsmasq.servers = ["8.8.8.8" "8.8.4.4"];
 
+  services.synergy.client = {
+    enable = true;
+    screenName = "nixos";
+    serverAddress = "172.26.0.46";
+  };
+
   environment = {
     systemPackages = with pkgs; [
       acpitool
