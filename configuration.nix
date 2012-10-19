@@ -160,6 +160,7 @@
       xfce.xfce4_systemload_plugin
       xfce.xfce4_cpufreq_plugin
       xorg.xf86inputsynaptics
+      xscreensaver
       zip
       zsh
     ];
